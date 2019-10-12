@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  db:
+    build: .docker/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+      MYSQL_DATABASE: ${DATABASE_KEY}
+      MYSQL_USER: ${DATABASE_KEY}
+      MYSQL_PASSWORD: ${DATABASE_KEY}
+    volumes:
+    - data:/var/lib/mysql
+    - ./.db:/docker-entrypoint-initdb.d
+
+  php:
+    build: .docker/php
+    command: php -S 0.0.0.0:8000
+    depends_on:
+    - db
+    restart: unless-stopped
+    networks:
+    - default
+    - traefik
+    labels:
+    - traefik.port=8000
+    - traefik.docker.network=traefik
+    - traefik.frontend.rule=Host:${COMPOSE_PROJECT_NAME}.localhost
+    working_dir: /var/www/html/webroot
+    volumes:
+    - ./src:/var/www/html
+
+networks:
+  traefik:
+    driver: overlay
+    external: true
+    name: traefik
+
+volumes:
+  data:
