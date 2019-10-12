@@ -1,0 +1,7 @@
+<li class="email">
+	<input type="hidden" name="emails[{{email.nb}}][id]" value="{{email.id}}"/>
+	<select name="emails[{{email.nb}}][type]">
+		{{types}}
+	</select>
+	<input type="text" placeholder="utilisateur@example.org" value="{{email.email}}" name="emails[{{email.nb}}][email]"/>
+</li>

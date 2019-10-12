@@ -1,0 +1,34 @@
+{
+	"/" : {
+		"pattern": "\/+$",
+		"goto": "/search/"
+	},
+	"/search/" : {
+		"pattern": "\/+search(\/.*)?$",
+		"view": "search.html",
+		"controller": "Search"
+	},
+	"/results/" : {
+		"pattern": "\/+results(\/.*)?$",
+		"view": "results.html",
+		"controller": "Result"
+	},
+	"/dashboard/": {
+		"pattern": "\/+dashboard(\/.*)?$",
+		"need_login": true,
+		"logged_in_default": true,
+		"view": "dashboard.html",
+		"controller": "Dashboard"
+	},
+	"/login/": {
+		"login": true,
+		"pattern": "\/+login(\/.*)?$",
+		"view": "login.html",
+		"controller": "Login"
+	},
+	"/logout/": {
+		"need_login": true,
+		"pattern": "\/+logout(\/.*)?$",
+		"controller": "Logout"
+	}
+}

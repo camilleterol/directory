@@ -1,0 +1,59 @@
+.login-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 340px;
+	height: 274px;
+	padding: 1px;
+	margin: -137px 0 0 -170px;
+	background: linear-gradient(#00b3ff, #0068c8);
+	border-radius: 5px;
+}
+
+	.login-message-wrapper {
+		display: none;
+		position: absolute;
+		bottom: 100%;
+		margin: 0 0 5px -1px;
+		padding: 1px;
+		background: linear-gradient(#ff7b7b, #ff0000);
+		border-radius: 5px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.login-message-visible {
+		display: block;
+	}
+	
+		.login-message {
+			padding: 15px;
+			background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .8));
+			border-radius: 4px;
+			font-family: sans-serif;
+			font-size: 12px;
+			color: #b54d4d;
+		}
+	
+
+	form {
+		background-color: white;
+		border-radius: 4px;
+		padding: 40px;
+		box-sizing: border-box;
+		height: 100%;
+	}
+	
+		input {
+			display: block;
+			width: 100%;
+		}
+		
+		input[type="submit"] {
+			margin-top: 34px;
+		}
+		
+		
+		label:first-of-type {
+			padding-top: 0;
+		}

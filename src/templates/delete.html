@@ -1,0 +1,8 @@
+<div class="contact-details">
+	<form class="confirm" method="POST">
+		<span class="message">Êtes-vous sur de vouloir supprimer le contact <span class="name">{{contact.full_name}}</span> ?</span>
+		<input type="hidden" value="{{contact.id}}" name="contact_id"/>
+		<a class="cancel button" href="/dashboard/user/{{contact.id}}">Annuler</a>
+		<input class="submit" type="submit" value="Confirmer"/>
+	</form>
+</div>

@@ -1,0 +1,7 @@
+<li class="phone">
+	<input type="hidden" name="phones[{{phone.nb}}][id]" value="{{phone.id}}"/>
+	<select name="phones[{{phone.nb}}][type]">
+		{{types}}
+	</select>
+	<input type="text" placeholder="0123456789" value="{{phone.number}}" name="phones[{{phone.nb}}][number]"/>
+</li>

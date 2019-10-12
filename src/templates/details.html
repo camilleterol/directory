@@ -1,0 +1,28 @@
+<div class="toolbar">
+	<a class="button edit" href="/dashboard/edit/{{contact.id}}">Modifier</a>
+	<a class="button delete" href="/dashboard/delete/{{contact.id}}">Supprimer</a>
+</div>
+<div class="contact-details">
+	<div class="name">
+		<span>{{contact.first_name}}</span>
+		<span>{{contact.last_name}}</span>
+	</div>
+	<label>
+		<span class="title">{{contact.phones.title}}</span>
+	</label>
+	<ul class="phones">
+		{{contact.phones.html}}
+	</ul>
+	<label>
+		<span class="title">{{contact.emails.title}}</span>
+	</label>
+	<ul class="emails">
+		{{contact.emails.html}}
+	</ul>
+	<label>
+		<span class="title">{{contact.addresses.title}}</span>
+	</label>
+	<ul class="addresses">
+		{{contact.addresses.html}}
+	</ul>
+</div>

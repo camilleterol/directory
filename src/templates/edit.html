@@ -1,0 +1,45 @@
+<form class="edit" method="POST">
+	<div class="contact-details">
+		<div class="name">
+			<span><input type="text" placeholder="Prénom" value="{{contact.first_name}}" name="first_name"/></span>
+			<span><input type="text" placeholder="Nom" value="{{contact.last_name}}" name="last_name"/></span>
+		</div>
+		<label>
+			<span class="title">Téléphone</span>
+		</label>
+		<input type="hidden" name="phone-count" value="{{contact.phones.count}}"/>
+		<ul class="phones">
+			{{contact.phones.html}}
+			<a class="add">
+				<span class="add-text">Ajouter un numéro de téléphone</span>
+				<input type="submit" name="sb" value="add-phone"/>
+			</a>
+		</ul>
+		<label>
+			<span class="title">Email</span>
+		</label>
+		<input type="hidden" name="email-count" value="{{contact.emails.count}}"/>
+		<ul class="emails">
+			{{contact.emails.html}}
+			<a class="add">
+				<span class="add-text">Ajouter une addresse email</span>
+				<input type="submit" name="sb" value="add-email"/>
+			</a>
+		</ul>
+		<label>
+			<span class="title">Adresse</span>
+		</label>
+		<input type="hidden" name="address-count" value="{{contact.addresses.count}}"/>
+		<ul class="addresses">
+			{{contact.addresses.html}}
+			<a class="add">
+				<span class="add-text">Ajouter une addresse</span>
+				<input type="submit" name="sb" value="add-address"/>
+			</a>
+		</ul>
+	</div>
+	<div class="save footer">
+		<input type="submit" name="sb" value="Annuler"/>
+		<input type="submit" name="sb" value="Sauvegarder"/>
+	</div>
+</form>

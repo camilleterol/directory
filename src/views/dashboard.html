@@ -1,0 +1,17 @@
+<div class="header">
+	<span class="greet">Bienvenue {{nickname}} !</span>
+	<a class="button logout" href="/logout/">Se déconnecter</a>
+</div>
+<div class="content">
+	<div class="sidebar">
+		<div class="toolbar">
+			<a class="button add" href="/dashboard/add">Ajouter</a>
+		</div>
+		<ul class="contacts-list">
+			{{contacts.html}}
+		</ul>
+	</div>
+	<div class="contact-details-wrapper">
+		{{details.html}}
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div class="header">
+	<form action="/results/" method="POST">
+		<input type="search" placeholder="Nom, adresse, téléphone, ..." name="q" value="{{search.query}}"/>
+		<input type="submit" value="Rechercher"/>
+	</form>
+</div>
+<div class="results-wrapper">
+	<span class="results-specs">{{search.string}}</span>
+	<ul class="results">
+		{{results}}
+	</ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="login-wrapper">
+	<div class="login-message-wrapper {{error_type}}">	
+		<div class="login-message">{{error}}</div>
+	</div>
+	<form action="/login/" method="POST">
+		<label>Nom d'utilisateur</label>
+		<input type="text" name="username" value="{{user}}"/>
+		<label>Mot de passe</label>
+		<input type="password" name="password"/>
+		<input type="submit" value="Connexion"/>
+	</form>
+</div>

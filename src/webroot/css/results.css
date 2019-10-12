@@ -1,0 +1,137 @@
+body {
+	height: auto;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 61px;
+	background-color: white;
+	line-height: 45px;
+	border-bottom: #DDDDDD 1px solid;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 7px;
+}
+
+.results-wrapper {
+	margin: 61px auto 0 auto;
+	max-width: 510px;
+	padding: 0 10px;
+}
+
+	.results-specs {
+		font-family: sans-serif;
+		font-size: 13px;
+		color: #BBBBBB;
+		line-height: 30px;
+		padding: 0 10px;
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+input[type="search"] {
+	max-width: 400px;
+	width: calc(100% - 111px);
+}
+
+.results {
+	margin: 0;
+	padding: 0;
+}
+
+	.result {
+		font-family: sans-serif;
+		font-size: 13px;
+		background-color: white;
+		padding: 15px;
+		border: #DDDDDD 1px solid;
+		border-radius: 5px;
+		margin-top: 5px;
+	}
+	
+	.result:first-child {
+		margin-top: 0;
+	}
+	
+		.result ul {
+			margin: 0;
+			padding: 0;
+		}
+	
+		.name {
+			font-weight: bold;
+			font-size: 15px;
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		.addresses {
+			width: 50%;
+			box-sizing: border-box;
+			float: left;
+			min-width: 150px;
+		}
+		
+			.address {
+				margin-left: 10px;
+			}
+		
+			.address .type {
+				display: block;
+				font-weight: bold;
+			}
+			
+			.address .street, .address .city {
+				display: block;
+			}
+
+		ul.phones {
+			width: 50%;
+			box-sizing: border-box;
+			float: left;
+			text-align: right;
+			padding-top: 10px;
+			min-width: 150px;
+		}
+			
+			.phones .type {
+				text-transform: lowercase;
+				color: #BBBBBB;
+			}
+			
+			.phones .type:after {
+				content: ' :';
+			}
+			
+			.phone .number {
+				font-weight: bold;
+			}
+		
+		ul.emails {
+			width: 50%;
+			box-sizing: border-box;
+			float: left;
+			text-align: right;
+			padding-top: 10px;
+			min-width: 150px;
+		}
+			
+			.emails .type {
+				text-transform: lowercase;
+				color: #BBBBBB;
+			}
+			
+			.emails .type:after {
+				content: ' :';
+			}
+			
+			.phone .email {
+			}
+			
+	.clear {
+		clear: both;
+	}

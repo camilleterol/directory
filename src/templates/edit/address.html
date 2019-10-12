@@ -1,0 +1,15 @@
+<li class="address">
+	<input type="hidden" name="addresses[{{address.nb}}][id]" value="{{address.id}}"/>
+	<select name="addresses[{{address.nb}}][type]">
+		{{types}}
+	</select>
+	<div class="where">
+		<span class="street">
+			<textarea type="text" placeholder="Adresse" name="addresses[{{address.nb}}][street]">{{address.street}}</textarea>
+		</span>
+		<span class="city">
+			<input type="text" placeholder="Code Postal" value="{{address.zip}}" name="addresses[{{address.nb}}][zip]"/>
+			<input type="text" placeholder="Ville" value="{{address.city}}" name="addresses[{{address.nb}}][city]"/>
+		</span>
+	</div>
+</li>
